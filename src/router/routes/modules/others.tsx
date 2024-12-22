@@ -1,18 +1,18 @@
 import { Suspense, lazy } from "react";
 
-import Card from "@/components/card";
-import { Iconify, SvgIcon } from "@/components/icon";
+import { Iconify } from "@/components/icon";
 import { CircleLoading } from "@/components/loading";
 
 import type { AppRouteObject } from "#/router";
-
 
 const Casting = lazy(() => import("@/pages/sys/others/casting"));
 const CardCards = lazy(() => import("@/pages/sys/others/card-cards"));
 const BlindBox = lazy(() => import("@/pages/sys/others/blind-box"));
 const LinkCenter = lazy(() => import("@/pages/sys/others/link-center"));
 const FootballQuiz = lazy(() => import("@/pages/sys/others/football-quiz"));
-const AiSupercomputing = lazy(() => import("@/pages/sys/others/ai-supercomputing"));
+const AiSupercomputing = lazy(
+	() => import("@/pages/sys/others/ai-supercomputing"),
+);
 const WhitePaper = lazy(() => import("@/pages/sys/others/white-paper"));
 const MyTeam = lazy(() => import("@/pages/sys/others/my-team"));
 const MyWallet = lazy(() => import("@/pages/sys/others/my-wallet"));
@@ -137,7 +137,7 @@ const others: AppRouteObject[] = [
 			icon: <Iconify icon="solar:clipboard-bold-duotone" size={24} />,
 			key: "/my_wallet",
 		},
-	}
+	},
 ];
 
 export default others;

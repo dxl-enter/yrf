@@ -1,9 +1,9 @@
-import {Button, Col, Form, Input, Row, Select, Space, Tag, Typography} from "antd";
-import Table, { ColumnsType } from "antd/es/table";
+import { Button, Col, Form, Row, Select, Tag } from "antd";
+import Table, { type ColumnsType } from "antd/es/table";
 
 import Card from "@/components/card";
 import Scrollbar from "@/components/scrollbar";
-import {Organization} from "#/entity";
+import type { Organization } from "#/entity";
 
 interface DataType {
 	key: string;
@@ -45,7 +45,7 @@ export default function RecordTable() {
 				if (status === "Out of Date") color = "red";
 				return <Tag color={color}>{status}</Tag>;
 			},
-		}
+		},
 	];
 
 	const data: DataType[] = [
@@ -108,14 +108,13 @@ export default function RecordTable() {
 								<Select
 									placeholder="Please select"
 									options={[
-										{ value: '1', label: '我的提币' },
-										{ value: '2', label: '我的投资' },
-										{ value: '3', label: '我的收益' },
-										{ value: '4', label: '系统奖励' },
-										{ value: '5', label: '下级提现' },
+										{ value: "1", label: "我的提币" },
+										{ value: "2", label: "我的投资" },
+										{ value: "3", label: "我的收益" },
+										{ value: "4", label: "系统奖励" },
+										{ value: "5", label: "下级提现" },
 									]}
-								>
-								</Select>
+								/>
 							</Form.Item>
 						</Col>
 						<Col span={12} lg={12}>
@@ -127,11 +126,10 @@ export default function RecordTable() {
 								<Select
 									placeholder="Please select"
 									options={[
-										{ value: '11', label: '魔方盲盒' },
-										{ value: '22', label: 'LP铸造' },
+										{ value: "11", label: "魔方盲盒" },
+										{ value: "22", label: "LP铸造" },
 									]}
-								>
-								</Select>
+								/>
 							</Form.Item>
 						</Col>
 						<Col span={24} lg={24}>

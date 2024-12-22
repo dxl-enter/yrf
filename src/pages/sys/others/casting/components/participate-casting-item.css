@@ -1,0 +1,19 @@
+/* 铸造卡片 */
+.minting-card {
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.minting-icon {
+    font-size: 36px;
+    color: #888;
+}
+
+.minting-info {
+    font-size: 14px;
+}
+
+.minting-level {
+    font-size: 16px;
+    font-weight: bold;
+}

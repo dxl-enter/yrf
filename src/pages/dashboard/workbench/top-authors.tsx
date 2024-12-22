@@ -35,8 +35,7 @@ export default function TopAuthor() {
 			</header>
 			<main className="w-full">
 				{new Array(3).fill("").map((_, index) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-					<div key={index} className="mb-4 flex">
+					<div key={_} className="mb-4 flex">
 						<img
 							src={faker.image.avatarGitHub()}
 							alt=""

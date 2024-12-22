@@ -1,17 +1,14 @@
-import {Button, Drawer} from "antd";
+import { Button, Drawer } from "antd";
 import Color from "color";
 import { type CSSProperties, useState } from "react";
 
-import { IconButton, Iconify, SvgIcon } from "@/components/icon";
+import { IconButton, SvgIcon } from "@/components/icon";
 import LocalePicker from "@/components/locale-picker";
 import Logo from "@/components/logo";
 import { useSettings } from "@/store/settingStore";
 import { useThemeToken } from "@/theme/hooks";
 
-import AccountDropdown from "../_common/account-dropdown";
 import BreadCrumb from "../_common/bread-crumb";
-import NoticeButton from "../_common/notice";
-import SearchBar from "../_common/search-bar";
 import SettingButton from "../_common/setting-button";
 
 import { cn } from "@/utils";
@@ -75,7 +72,9 @@ export default function Header({ offsetTop = false }: Props) {
 					</div>
 					<div>标题</div>
 					<div className="flex">
-						<Button type="primary" ghost>连接钱包</Button>
+						<Button type="primary" ghost>
+							连接钱包
+						</Button>
 						<LocalePicker />
 						<SettingButton />
 					</div>
