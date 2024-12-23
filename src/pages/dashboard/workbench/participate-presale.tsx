@@ -20,7 +20,7 @@ export default function ParticipatePresale() {
 				<Col span={6} md={6}>
 					<Button
 						type="primary"
-						className="items-center"
+						className="items-center shadow__btn"
 						style={{ height: "60px" }}
 					>
 						参与预售

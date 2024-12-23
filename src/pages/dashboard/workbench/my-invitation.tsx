@@ -12,7 +12,7 @@ export default function MyInvitation() {
             </header>
             <div className="mt-4">
                 <Input value={value} disabled/>
-                <Button type="primary" className="mt-4" onClick={() => copyFn(value)}>复制邀请链接</Button>
+                <Button type="primary" className="mt-4 shadow__btn" onClick={() => copyFn(value)}>复制邀请链接</Button>
             </div>
         </Card>
     );

@@ -17,7 +17,7 @@ export default function ProjectPlanning() {
 							</li>
 						))}
 					</ul>
-					<Button className="mt-4 w-full" type="primary" shape="round">
+					<Button className="mt-4 w-full shadow__btn" type="primary" shape="round">
 						继续查看白皮书
 					</Button>
 				</main>

@@ -8,7 +8,7 @@ export default function CastingNumber() {
     return (
         <div className="flex-col">
             <div
-                className="flex justify-between items-center w-[180px]"
+                className="flex justify-between items-center w-[180px] shadow__btn-green"
                 style={{
                     padding: '8px 16px',
                     background: theme.colorPrimaryActive,
@@ -23,11 +23,9 @@ export default function CastingNumber() {
             </div>
             <div className="w-full flex justify-center items-center my-12">
                 <div
-                    className="w-[60vw] h-[60vw] flex flex-col justify-center items-center"
+                    className="w-[60vw] h-[60vw] flex flex-col justify-center items-center shadow__btn"
                     style={{
-                        background: "#666",
-                        borderRadius: '50%',
-                        border: `4px solid ${Color(theme.colorPrimary).alpha(0.4).toString()}`
+                        borderRadius: '50%'
                     }}
                 >
                     <DotChartOutlined style={{fontSize: '5em'}} />
@@ -37,7 +35,7 @@ export default function CastingNumber() {
                 </div>
             </div>
             <div className="w-full flex items-center justify-end w-[100px]">
-                <p style={{
+                <p className="shadow__btn-green" style={{
                     padding: '8px 16px',
                     background: theme.colorPrimaryActive,
                     borderTopLeftRadius: '20px',
@@ -49,6 +47,7 @@ export default function CastingNumber() {
                     width: "38vw",
                     height: "18vw",
                     background: `${Color(theme.colorPrimary).alpha(0.4).toString()}`,
+                    boxShadow: `0 0 10px ${Color(theme.colorInfo).toString()}`,
                 }}>
                     <span>本期额度</span>
                     <span>10万USDT</span>
@@ -57,6 +56,7 @@ export default function CastingNumber() {
                     width: "38vw",
                     height: "18vw",
                     background: `${Color(theme.colorPrimary).alpha(0.4).toString()}`,
+                    boxShadow: `0 0 10px ${Color(theme.colorInfo).toString()}`
                 }}>
                     <span>本期收益率</span>
                     <span>200%</span>
