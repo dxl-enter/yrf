@@ -12,6 +12,7 @@ export default function CardList() {
         <div className="w-full">
             {new Array(4).fill("").map((_) => (
                 <Card
+                    key={_}
                     style={{
                         marginBottom: "26px",
                         boxShadow: `0 0 5px #30CFD0`

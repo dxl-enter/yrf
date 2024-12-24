@@ -49,7 +49,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<HelmetProvider>
 		<QueryClientProvider client={queryClient}>
-			<ReactQueryDevtools initialIsOpen={false} />
+			{/*<ReactQueryDevtools initialIsOpen={false} />*/}
 			<Suspense>
 				<Analytics />
 

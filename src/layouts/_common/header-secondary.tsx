@@ -8,17 +8,11 @@ export default function HeaderSecondary() {
 	const navigatge = useNavigate();
 	const matches = useMatches();
 	const routePath = matches.at(-1).pathname;
-	const JumpList = JumpRoutes.children?.find((item) => {
+	const JumpArr = [...JumpRoutes.children]
+	const JumpList = JumpArr?.find((item) => {
 		console.log(item.meta?.key, routePath)
 		return item.meta?.key === routePath
 	}) ?? [];
-
-	// const { t } = useTranslation();
-	// 获取本页面路由
-
-	// 获取jump-routes.tsx路由配置中的label
-
-	console.log('matches=====', JumpList)
 	const goBack = () => {
 		navigatge(-1)
 	}

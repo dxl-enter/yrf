@@ -4,7 +4,7 @@ import ParticipateCastingItem from "@/pages/sys/others/casting/components/partic
 
 export default function ParticipateCasting() {
 	return (
-		<Card className="flex-col">
+		<div className="flex-col">
 			<header className="self-start flex items-center justify-between">
 				<Typography.Title level={5}>参与铸造</Typography.Title>
 				<Button type="link" ghost icon={<QuestionCircleOutlined />}>
@@ -18,6 +18,6 @@ export default function ParticipateCasting() {
 					</div>
 				))}
 			</section>
-		</Card>
+		</div>
 	);
 }

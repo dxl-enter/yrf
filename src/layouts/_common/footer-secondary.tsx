@@ -1,17 +1,25 @@
+import type React from "react";
 
-import SettingButton from "./setting-button";
-import {LeftOutlined} from "@ant-design/icons";
-import { useNavigate } from "react-router";
-export default function FooterSecondary() {
-	const navigatge = useNavigate();
+import { useThemeToken } from "@/theme/hooks";
 
-	const goBack = () => {
-		navigatge(-1)
-	}
+type Props = {
+	children: React.ReactNode;
+};
+export default function FooterSecondary({ children }: Props) {
+	const { colorBgElevated, colorTextBase } = useThemeToken();
 	return (
-		<header className="flex h-16 w-full items-center justify-between px-6">
-			<LeftOutlined onClick={goBack} />
-			<SettingButton />
-		</header>
+		<footer
+			style={{
+				position: 'fixed',
+				bottom: '0',
+				padding: '10px',
+				width: '100%',
+				zIndex: 9999,
+				color: colorTextBase,
+				background: colorBgElevated,
+			}}
+		>
+			{children}
+		</footer>
 	);
 }

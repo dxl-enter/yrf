@@ -6,7 +6,7 @@ export default function CardOperate() {
     return (
             <Row className="w-full" justify="space-between">
                 {new Array(4).fill("").map((_) => (
-                    <Col className="gutter-row" span={5}>
+                    <Col key={_} className="gutter-row" span={5}>
                         <div className="shadow__btn" style={style}>市场行情</div>
                     </Col>
                 ))}
