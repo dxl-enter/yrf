@@ -9,6 +9,7 @@ import type { AppRouteObject } from "#/router";
 import SecondaryLayout from "@/layouts/secondaryLayout";
 
 const WithdrawalRecord = lazy(() => import("@/pages/sys/others/withdrawal-record"));
+const CardDetails = lazy(() => import("@/pages/sys/others/card-cards/card-details/index"));
 
 /**
  * error routes
@@ -25,6 +26,21 @@ export const JumpRoutes: AppRouteObject = {
 		</AuthGuard>
 	),
 	children: [
-		{ path: "withdrawal_record", element: <WithdrawalRecord /> },
-	],
+		{
+			path: "withdrawal_record",
+			element: <WithdrawalRecord />,
+			meta: {
+				label: "sys.menu.secondary-page.withdrawal-record",
+				key: "/withdrawal_record",
+			},
+		},
+		{
+			path: "card_details",
+			element: <CardDetails />,
+			meta: {
+				label: "sys.menu.secondary-page.details",
+				key: "/card_details",
+			},
+		},
+	]
 };

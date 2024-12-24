@@ -15,10 +15,17 @@ export default function SecondaryLayout({ children }: Props) {
 			style={{
 				color: colorTextBase,
 				background: colorBgElevated,
+				position: 'fixed',
+				top: 0,
+				left: 0,
+				zIndex: 9
 			}}
 		>
 			<HeaderSecondary />
-			{children}
+			<div style={{overflow: 'auto'}}>
+				{children}
+			</div>
+
 		</div>
 	);
 }
