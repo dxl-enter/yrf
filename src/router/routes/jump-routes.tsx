@@ -10,6 +10,8 @@ import SecondaryLayout from "@/layouts/secondaryLayout";
 
 const WithdrawalRecord = lazy(() => import("@/pages/sys/others/withdrawal-record"));
 const CardDetails = lazy(() => import("@/pages/sys/others/card-cards/card-details/index"));
+const StrategyGuide = lazy(() => import("@/pages/sys/others/casting/components/strategy-guide"));
+const ParticipationQuota = lazy(() => import("@/pages/sys/others/casting/components/participation-quota"));
 
 /**
  * error routes
@@ -42,5 +44,21 @@ export const JumpRoutes: AppRouteObject = {
 				key: "/card_details",
 			},
 		},
+		{
+			path: "strategy_guide",
+			element: <StrategyGuide />,
+			meta: {
+				label: "sys.menu.secondary-page.strategy-guide",
+				key: "/strategy_guide",
+			},
+		},
+		{
+			path: "participation_quota",
+			element: <ParticipationQuota />,
+			meta: {
+				label: "sys.menu.secondary-page.participation-quota",
+				key: "/participation_quota",
+			},
+		}
 	]
 };

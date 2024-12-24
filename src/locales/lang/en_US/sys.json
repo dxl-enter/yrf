@@ -111,7 +111,9 @@
 			},
 			"secondary-page": {
 				"details": "Details",
-				"withdrawal-record": "Withdrawal Record"
+				"withdrawal-record": "Withdrawal Record",
+				"strategy_guide": "Strategy Guide",
+				"participation-quota": "Participation Quota"
 			},
 			"blog": "Blog",
 			"components": "Components",

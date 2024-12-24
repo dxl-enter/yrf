@@ -1,11 +1,16 @@
 import { Row, Col, Card } from "antd";
 import RevenueItem from "./revenue-item";
+import {useNavigate} from "react-router";
 
 export default function RevenueStatistics() {
+	const navigatge = useNavigate();
+	const onParticipationQuota = () => {
+		navigatge('/participation_quota');
+	};
 	return (
 		<Card className="flex-col">
 			<Row gutter={[16, 16]} justify="center">
-				<Col lg={6} md={6} span={6}>
+				<Col lg={6} md={6} span={6} onClick={onParticipationQuota}>
 					<RevenueItem title="714k" subtitle="参与额度" />
 				</Col>
 				<Col lg={6} md={6} span={6}>
