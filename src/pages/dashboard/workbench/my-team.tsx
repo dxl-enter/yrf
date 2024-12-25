@@ -1,13 +1,22 @@
-import {Row, Col, Typography, Card} from "antd";
+import {Row, Col, Typography, Card, Button} from "antd";
 import AnalysisTeam from "./analysis-team";
+import {QuestionCircleOutlined, RightOutlined} from "@ant-design/icons";
+import {useNavigate} from "react-router";
 
 export default function MyTeam() {
+    const navigatge = useNavigate();
+    const goMyTeam = () => {
+        navigatge('/my_team');
+    };
     return (
         <Card className="flex-col">
-            <header className="self-start">
+            <header className="self-start flex items-center justify-between">
                 <Typography.Title level={5}>我的团队</Typography.Title>
+                <Button type="link" ghost icon={<RightOutlined />} iconPosition="end" onClick={goMyTeam}>
+                    团队明细
+                </Button>
             </header>
-            <Row gutter={[16, 16]} justify="center">
+            <Row gutter={[16, 16]} justify="center" className="mt-4">
                 <Col lg={6} md={6} span={6}>
                     <AnalysisTeam
                         title="714k"

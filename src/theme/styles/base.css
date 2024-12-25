@@ -403,7 +403,7 @@ video {
 .card {
 	position: relative;
 	height: auto;
-	background: linear-gradient(-45deg, #fe0847, #feae3f);
+	background: linear-gradient(-45deg, #fe0847, #feae3f)!important;
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
@@ -418,4 +418,23 @@ video {
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
 	overflow: hidden;
+}
+.ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
+.ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+	background: linear-gradient(to right, #039161 0%, #30CFD0 100%) !important;
+	box-shadow: 0 0 25px rgb(7, 116, 79) !important;
+}
+.ant-progress-circle {
+	box-shadow: 0px 0px 25px rgb(7, 116, 79);
+	border-radius: 100%;
+}
+.ant-progress-text {
+	background: linear-gradient(to left, #EB22CB 0%, #30CFD0 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+	font-size: 0.8em !important;
+	text-shadow:
+			-1px -1px 0 #24ff72,
+			1px 1px 0 #EB22CB;
 }

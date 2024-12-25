@@ -1,6 +1,11 @@
 import { Progress, Button, Row, Col } from "antd";
+import {useNavigate} from "react-router";
 
 export default function ParticipatePresale() {
+	const navigatge = useNavigate();
+	const onPresaleDetails = () => {
+		navigatge('/presale_details');
+	};
 	return (
 		<div className="flex-col">
 			<Row gutter={[16, 16]} className="w-full mt-4" justify="center">
@@ -22,6 +27,7 @@ export default function ParticipatePresale() {
 						type="primary"
 						className="items-center shadow__btn"
 						style={{ height: "60px" }}
+						onClick={onPresaleDetails}
 					>
 						参与预售
 					</Button>

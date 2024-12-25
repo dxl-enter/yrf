@@ -12,6 +12,7 @@ const WithdrawalRecord = lazy(() => import("@/pages/sys/others/withdrawal-record
 const CardDetails = lazy(() => import("@/pages/sys/others/card-cards/card-details/index"));
 const StrategyGuide = lazy(() => import("@/pages/sys/others/casting/components/strategy-guide"));
 const ParticipationQuota = lazy(() => import("@/pages/sys/others/casting/components/participation-quota"));
+const PresaleDetails = lazy(() => import("@/pages/dashboard/workbench/presale-details"));
 
 /**
  * error routes
@@ -59,6 +60,14 @@ export const JumpRoutes: AppRouteObject = {
 				label: "sys.menu.secondary-page.participation-quota",
 				key: "/participation_quota",
 			},
-		}
+		},
+		{
+			path: "presale_details",
+			element: <PresaleDetails />,
+			meta: {
+				label: "sys.menu.secondary-page.presale-details",
+				key: "/presale_details",
+			},
+		},
 	]
 };
