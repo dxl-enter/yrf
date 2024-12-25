@@ -372,6 +372,9 @@ video {
 	background: linear-gradient(to right, #039161 0%, #30CFD0 100%) !important;
 	box-shadow: 0 0 25px rgb(7, 116, 79) !important;
 }
+.shadow__btn-blue {
+	background: linear-gradient(135deg, #fe0847, #feae3f) !important;
+}
 .box-shadow-red {
 	box-shadow: 0 0 25px #EB22CB !important;
 }
@@ -383,6 +386,9 @@ video {
 }
 .box-shadow-inset-green {
 	box-shadow: inset 0 0 25px rgb(7, 116, 79) !important;
+}
+.box-shadow-inset-grey {
+	box-shadow: inset 0 0 25px grey !important;
 }
 .gallery-border {
 	background: linear-gradient(to left, #EB22CB, #30CFD0);
