@@ -17,6 +17,7 @@ const PresaleDetails = lazy(() => import("@/pages/dashboard/workbench/presale-de
 const IndexMore = lazy(() => import("@/pages/dashboard/workbench/index-more"));
 const SystemParameter = lazy(() => import("@/pages/sys/others/blind-box/components/system-parameter"));
 const MyBlindBox = lazy(() => import("@/pages/sys/others/blind-box/components/my-blind-box"));
+const MyTeamRecord = lazy(() => import("@/pages/sys/others/my-team/components/my-team-record"));
 
 /**
  * error routes
@@ -103,6 +104,14 @@ export const JumpRoutes: AppRouteObject = {
 			meta: {
 				label: "sys.menu.secondary-page.my-blind-box",
 				key: "/my_blind_box",
+			},
+		},
+		{
+			path: "my_team_record",
+			element: <MyTeamRecord />,
+			meta: {
+				label: "sys.menu.secondary-page.my-team-record",
+				key: "/my_team_record",
 			},
 		},
 	]

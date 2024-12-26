@@ -6,7 +6,7 @@ import {useNavigate} from "react-router";
 export default function MyTeamData() {
     const navigatge = useNavigate();
     const recordWithdrawal = () => {
-        navigatge('/withdrawal_record');
+        navigatge('/my_team_record');
     };
     return (
         <Card className="flex-col">

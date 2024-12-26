@@ -1,6 +1,5 @@
-import { Card, Typography } from "antd";
+import { Card, Typography, Table } from "antd";
 import Scrollbar from "@/components/scrollbar";
-import Table, { type ColumnsType } from "antd/es/table";
 
 interface DataType {
 	key: string;
@@ -10,7 +9,7 @@ interface DataType {
 	status: string;
 }
 export default function MyTeamPush() {
-	const columns: ColumnsType<DataType> = [
+	const columns = [
 		{
 			title: "邀请时间",
 			dataIndex: "id",

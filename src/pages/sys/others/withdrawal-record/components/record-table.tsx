@@ -1,9 +1,7 @@
-import { Button, Col, Form, Row, Select, Tag } from "antd";
-import Table, { type ColumnsType } from "antd/es/table";
-
+import { Button, Col, Form, Row, Select, Tag, Table } from "antd";
+import type { FormProps } from 'antd';
 import Card from "@/components/card";
 import Scrollbar from "@/components/scrollbar";
-import type { Organization } from "#/entity";
 
 interface DataType {
 	key: string;
@@ -12,11 +10,24 @@ interface DataType {
 	price: string;
 	status: string;
 }
-type SearchFormFieldType = Pick<Organization, "name" | "status">;
-
+type FieldType = {
+	username?: string;
+	password?: string;
+	remember?: string;
+};
 export default function RecordTable() {
-	const [searchForm] = Form.useForm();
-	const columns: ColumnsType<DataType> = [
+	const [form] = Form.useForm();
+	const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
+		console.log('Success:', values);
+	};
+
+	const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
+		console.log('Failed:', errorInfo);
+	};
+	const onSearchFormReset = () => {
+		form.resetFields();
+	};
+	const columns = [
 		{
 			title: "时间",
 			dataIndex: "id",
@@ -85,22 +96,13 @@ export default function RecordTable() {
 			status: "Paid",
 		},
 	];
-
-	const onSearchFormReset = () => {
-		searchForm.resetFields();
-	};
-
-	const onFinish = (values: any) => {
-		console.log(values);
-	};
-
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
-				<Form form={searchForm} onFinish={onFinish}>
+				<Form form={form} onFinish={onFinish} onFinishFailed={onFinishFailed}>
 					<Row gutter={[16, 16]}>
 						<Col span={12} lg={12}>
-							<Form.Item<SearchFormFieldType>
+							<Form.Item
 								label="操作"
 								name="name"
 								className="!mb-0"
@@ -118,7 +120,7 @@ export default function RecordTable() {
 							</Form.Item>
 						</Col>
 						<Col span={12} lg={12}>
-							<Form.Item<SearchFormFieldType>
+							<Form.Item
 								label="类型"
 								name="status"
 								className="!mb-0"
