@@ -4,7 +4,6 @@ import {
 	Form,
 	Row,
 	Select,
-	Tag,
 	Table,
 	Input,
 	Typography,
@@ -27,7 +26,7 @@ type FieldType = {
 	password?: string;
 	remember?: string;
 };
-export default function MyTeamRecord() {
+export default function PerformanceInquiry() {
 	const [form] = Form.useForm();
 	const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
 		console.log("Success:", values);
@@ -54,22 +53,10 @@ export default function MyTeamRecord() {
 			key: "category",
 		},
 		{
-			title: "生态类型",
+			title: "类型",
 			dataIndex: "price",
 			key: "price",
 			render: (text) => <span>{text}</span>,
-		},
-		{
-			title: "收益类型",
-			key: "status",
-			dataIndex: "status",
-			render: (_status) => {
-				const status = _status as string;
-				let color = "success";
-				if (status === "Progress") color = "gold";
-				if (status === "Out of Date") color = "red";
-				return <Tag color={color}>{status}</Tag>;
-			},
 		},
 		{
 			title: "金额",
@@ -128,17 +115,14 @@ export default function MyTeamRecord() {
 					justify="space-between"
 					className="card box-shadow-red"
 				>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="714k" subtitle="团队收益" />
+					<Col span={8}>
+						<AnalysisTeam title="1.35m" subtitle="业绩总计" />
 					</Col>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="1.35m" subtitle="我的收益" />
+					<Col span={8}>
+						<AnalysisTeam title="1.72m" subtitle="盲盒总计" />
 					</Col>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="1.72m" subtitle="盲盒收益" />
-					</Col>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="234" subtitle="LP收益" />
+					<Col span={8}>
+						<AnalysisTeam title="234" subtitle="LP总计" />
 					</Col>
 				</Row>
 			</div>
@@ -156,23 +140,13 @@ export default function MyTeamRecord() {
 					<Form.Item label="下级地址" name="name">
 						<Input placeholder="Please input" />
 					</Form.Item>
-					<Form.Item label="生态类型" name="name">
+					<Form.Item label="业绩类型" name="name">
 						<Select
 							placeholder="Please select"
 							options={[
 								{ value: "1", label: "全部" },
 								{ value: "2", label: "盲盒" },
 								{ value: "3", label: "LP铸造" },
-							]}
-						/>
-					</Form.Item>
-					<Form.Item label="收益类型" name="status">
-						<Select
-							placeholder="Please select"
-							options={[
-								{ value: "00", label: "全部" },
-								{ value: "11", label: "下级收益" },
-								{ value: "22", label: "团队收益" },
 							]}
 						/>
 					</Form.Item>

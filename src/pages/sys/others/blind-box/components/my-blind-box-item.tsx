@@ -1,4 +1,4 @@
-import { Row, Col, Button, Image } from "antd";
+import { Row, Col, Image } from "antd";
 import Color from "color";
 import { useThemeToken } from "@/theme/hooks";
 
@@ -21,10 +21,21 @@ export default function CastingPeogressItem() {
 						<div className="pl-4 minting-info">
 							<div className="minting-level">
 								一级铸造
-								<span className="card ml-2" style={{padding: "2px 8px",fontSize: "12px"}}>倍数200%</span>
+								<span
+									className="card ml-2"
+									style={{ padding: "2px 8px", fontSize: "12px" }}
+								>
+									倍数200%
+								</span>
 							</div>
-							<div>参与金额：5000 USDT   <span className="ml-2">已铸造：12天</span> </div>
-							<div>每日释放：3%/天   <span className="ml-2">已释放：200CSC</span></div>
+							<div>
+								参与金额：5000 USDT <span className="ml-2">
+									已铸造：12天
+								</span>{" "}
+							</div>
+							<div>
+								每日释放：3%/天 <span className="ml-2">已释放：200CSC</span>
+							</div>
 							<div>今日释放：100CSC</div>
 							<div>释放类型：分期释放</div>
 						</div>

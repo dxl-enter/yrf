@@ -2,9 +2,20 @@ import { Card, Col, Row, Typography } from "antd";
 import { useThemeToken } from "@/theme/hooks";
 import AnalysisCard from "@/pages/sys/others/my-team/components/analysis-card";
 import Color from "color";
+import { useNavigate } from "react-router";
 
 export default function MyTeamTool() {
 	const theme = useThemeToken();
+	const navigatge = useNavigate();
+	const onInvitationCode = () => {
+		navigatge("/invitation_code");
+	};
+	const onBindSuperiors = () => {
+		navigatge("/bind_superiors");
+	};
+	const onPerformanceInquiry = () => {
+		navigatge("/performance_inquiry");
+	};
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
@@ -12,7 +23,7 @@ export default function MyTeamTool() {
 			</header>
 			<section className="w-full mt-4">
 				<Row gutter={[16, 16]} justify="center">
-					<Col lg={6} md={6} span={6}>
+					<Col lg={6} md={6} span={6} onClick={onInvitationCode}>
 						<AnalysisCard
 							subtitle="邀请码"
 							style={{
@@ -27,7 +38,7 @@ export default function MyTeamTool() {
 							}}
 						/>
 					</Col>
-					<Col lg={6} md={6} span={6}>
+					<Col lg={6} md={6} span={6} onClick={onBindSuperiors}>
 						<AnalysisCard
 							subtitle="绑定上级"
 							style={{
@@ -40,7 +51,7 @@ export default function MyTeamTool() {
 							}}
 						/>
 					</Col>
-					<Col lg={6} md={6} span={6}>
+					<Col lg={6} md={6} span={6} onClick={onPerformanceInquiry}>
 						<AnalysisCard
 							subtitle="业务查询"
 							style={{

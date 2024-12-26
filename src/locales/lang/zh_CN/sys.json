@@ -120,7 +120,10 @@
 				"gameplay-introduction": "玩法介绍",
 				"system-parameter": "系统参数",
 				"my-blind-box": "我的盲盒",
-				"my-team-record": "收益记录"
+				"my-team-record": "收益记录",
+				"invitation-code": "邀请码",
+				"bind-superiors": "绑定上级",
+				"performance-inquiry": "业务查询"
 			},
 			"blog": "博客",
 			"components": "组件",

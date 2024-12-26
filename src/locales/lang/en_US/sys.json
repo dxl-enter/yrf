@@ -121,7 +121,10 @@
 				"gameplay-introduction": "Gameplay Introduction",
 				"system-parameter": "System Parameter",
 				"my-blind-box": "My Blind Box",
-				"my-team-record": "My Team Record"
+				"my-team-record": "My Team Record",
+				"invitation-code": "Invitation Code",
+				"bind-superiors": "Bind Superiors",
+				"performance-inquiry": "Performance Inquiry"
 			},
 			"blog": "Blog",
 			"components": "Components",

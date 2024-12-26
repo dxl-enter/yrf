@@ -8,16 +8,43 @@ import AuthGuard from "../components/auth-guard";
 import type { AppRouteObject } from "#/router";
 import SecondaryLayout from "@/layouts/secondaryLayout";
 
-const WithdrawalRecord = lazy(() => import("@/pages/sys/others/withdrawal-record"));
-const CardDetails = lazy(() => import("@/pages/sys/others/card-cards/card-details/index"));
-const StrategyGuide = lazy(() => import("@/pages/sys/others/casting/components/strategy-guide"));
-const ParticipationQuota = lazy(() => import("@/pages/sys/others/casting/components/participation-quota"));
-const BlindDetails = lazy(() => import("@/pages/sys/others/blind-box/blind-details/index"));
-const PresaleDetails = lazy(() => import("@/pages/dashboard/workbench/presale-details"));
+const WithdrawalRecord = lazy(
+	() => import("@/pages/sys/others/withdrawal-record"),
+);
+const CardDetails = lazy(
+	() => import("@/pages/sys/others/card-cards/card-details/index"),
+);
+const StrategyGuide = lazy(
+	() => import("@/pages/sys/others/casting/components/strategy-guide"),
+);
+const ParticipationQuota = lazy(
+	() => import("@/pages/sys/others/casting/components/participation-quota"),
+);
+const BlindDetails = lazy(
+	() => import("@/pages/sys/others/blind-box/blind-details/index"),
+);
+const PresaleDetails = lazy(
+	() => import("@/pages/dashboard/workbench/presale-details"),
+);
 const IndexMore = lazy(() => import("@/pages/dashboard/workbench/index-more"));
-const SystemParameter = lazy(() => import("@/pages/sys/others/blind-box/components/system-parameter"));
-const MyBlindBox = lazy(() => import("@/pages/sys/others/blind-box/components/my-blind-box"));
-const MyTeamRecord = lazy(() => import("@/pages/sys/others/my-team/components/my-team-record"));
+const SystemParameter = lazy(
+	() => import("@/pages/sys/others/blind-box/components/system-parameter"),
+);
+const MyBlindBox = lazy(
+	() => import("@/pages/sys/others/blind-box/components/my-blind-box"),
+);
+const MyTeamRecord = lazy(
+	() => import("@/pages/sys/others/my-team/components/my-team-record"),
+);
+const InvitationCode = lazy(
+	() => import("@/pages/sys/others/my-team/components/invitation-code"),
+);
+const BindSuperiors = lazy(
+	() => import("@/pages/sys/others/my-team/components/bind-superiors"),
+);
+const PerformanceInquiry = lazy(
+	() => import("@/pages/sys/others/my-team/components/performance-inquiry"),
+);
 
 /**
  * error routes
@@ -114,5 +141,29 @@ export const JumpRoutes: AppRouteObject = {
 				key: "/my_team_record",
 			},
 		},
-	]
+		{
+			path: "invitation_code",
+			element: <InvitationCode />,
+			meta: {
+				label: "sys.menu.secondary-page.invitation-code",
+				key: "/invitation_code",
+			},
+		},
+		{
+			path: "bind_superiors",
+			element: <BindSuperiors />,
+			meta: {
+				label: "sys.menu.secondary-page.bind-superiors",
+				key: "/bind_superiors",
+			},
+		},
+		{
+			path: "performance_inquiry",
+			element: <PerformanceInquiry />,
+			meta: {
+				label: "sys.menu.secondary-page.performance-inquiry",
+				key: "/performance_inquiry",
+			},
+		},
+	],
 };
