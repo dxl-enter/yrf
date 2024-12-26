@@ -12,19 +12,11 @@ export default function BlindBox() {
 	};
 
 	const handleMyBlindBox = () => {
-		try {
-			alert('我的盲盒');
-		} catch (error) {
-			console.error('Error in handleMyBlindBox:', error);
-		}
+		navigatge('/my_blind_box');
 	};
 
 	const handleBlindBoxWallet = () => {
-		try {
-			alert('盲盒钱包');
-		} catch (error) {
-			console.error('Error in handleBlindBoxWallet:', error);
-		}
+		navigatge('/my_wallet');
 	};
 
 	const handleOneKeyWithdraw = () => {
