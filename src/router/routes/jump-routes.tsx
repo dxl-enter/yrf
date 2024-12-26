@@ -15,6 +15,7 @@ const ParticipationQuota = lazy(() => import("@/pages/sys/others/casting/compone
 const BlindDetails = lazy(() => import("@/pages/sys/others/blind-box/blind-details/index"));
 const PresaleDetails = lazy(() => import("@/pages/dashboard/workbench/presale-details"));
 const IndexMore = lazy(() => import("@/pages/dashboard/workbench/index-more"));
+const SystemParameter = lazy(() => import("@/pages/sys/others/blind-box/components/system-parameter"));
 
 /**
  * error routes
@@ -86,6 +87,14 @@ export const JumpRoutes: AppRouteObject = {
 				label: "sys.menu.secondary-page.blind-details",
 				key: "/blind_details",
 			},
-		}
+		},
+		{
+			path: "system_parameter",
+			element: <SystemParameter />,
+			meta: {
+				label: "sys.menu.secondary-page.system-parameter",
+				key: "/system_parameter",
+			},
+		},
 	]
 };

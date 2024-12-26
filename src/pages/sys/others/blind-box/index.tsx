@@ -3,15 +3,12 @@ import type React from "react";
 import BriefIntroduction from "./components/brief-introduction";
 import CardOperate from "@/pages/sys/others/card-cards/components/card-operate";
 import CardList from "./components/card-list";
+import {useNavigate} from "react-router";
 
 export default function BlindBox() {
-	// 定义操作函数
+	const navigatge = useNavigate();
 	const handleSystemParams = () => {
-		try {
-			alert('系统参数');
-		} catch (error) {
-			console.error('Error in handleSystemParams:', error);
-		}
+		navigatge('/system_parameter');
 	};
 
 	const handleMyBlindBox = () => {
