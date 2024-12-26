@@ -13,6 +13,7 @@ const CardDetails = lazy(() => import("@/pages/sys/others/card-cards/card-detail
 const StrategyGuide = lazy(() => import("@/pages/sys/others/casting/components/strategy-guide"));
 const ParticipationQuota = lazy(() => import("@/pages/sys/others/casting/components/participation-quota"));
 const PresaleDetails = lazy(() => import("@/pages/dashboard/workbench/presale-details"));
+const IndexMore = lazy(() => import("@/pages/dashboard/workbench/index-more"));
 
 /**
  * error routes
@@ -67,6 +68,14 @@ export const JumpRoutes: AppRouteObject = {
 			meta: {
 				label: "sys.menu.secondary-page.presale-details",
 				key: "/presale_details",
+			},
+		},
+		{
+			path: "index-more",
+			element: <IndexMore />,
+			meta: {
+				label: "sys.menu.secondary-page.index-more",
+				key: "/index-more",
 			},
 		},
 	]

@@ -425,6 +425,14 @@ video {
 	-o-transition: 0.5s;
 	overflow: hidden;
 }
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5); /* 黑色半透明 */
+}
 .ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
 .ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
 	background: linear-gradient(to right, #039161 0%, #30CFD0 100%) !important;

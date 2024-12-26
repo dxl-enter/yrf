@@ -7,6 +7,12 @@ export default function Notice() {
     const onCasting = () => {
         navigatge('/casting');
     };
+    const onBlindBox = () => {
+        navigatge('/blind_box');
+    };
+    const onMore = () => {
+        navigatge('/index-more');
+    };
     return (
         <Card className="flex-col">
             <Row gutter={[16, 16]} className="w-full" justify="center">
@@ -45,11 +51,13 @@ export default function Notice() {
                         width="100%"
                         height="100px"
                         src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                        onClick={onBlindBox}
                     />
                     <Image
                         width="100%"
                         height="100px"
                         src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                        onClick={onMore}
                     />
                 </Col>
             </Row>
