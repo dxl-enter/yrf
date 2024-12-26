@@ -23,3 +23,6 @@ Run the following command to build the production version:
 ```bash
 pnpm build
 ```
+
+git commit -m  时报错Checked 19 files in 15ms. No fixes applied.
+解决：git commit --no-verify -m "提交"
