@@ -1,12 +1,11 @@
 
 import React from "react";
-import {Button, Card, Carousel, Flex, Tag, Typography} from "antd";
+import {Card, Carousel, Flex, Tag, Typography} from "antd";
 import {useNavigate} from "react-router";
-import banner3 from "@/assets/images/background/overlay_2.jpg";
 export default function CardList() {
     const navigatge = useNavigate();
-    const goCardDetails = () => {
-        navigatge('/card_details');
+    const goBlindDetails = () => {
+        navigatge('/blind_details');
     };
     const cardStyle: React.CSSProperties = {
         width: '100%',
@@ -24,7 +23,7 @@ export default function CardList() {
     };
     return (
         <div className="w-full">
-            <Card hoverable style={cardStyle} styles={{ body: { padding: 0, overflow: 'hidden' } }}>
+            <Card hoverable style={cardStyle} styles={{ body: { padding: 0, overflow: 'hidden' } }} onClick={goBlindDetails}>
                     <Flex vertical align="center">
                         <div style={{position: 'relative'}}>
                             <img

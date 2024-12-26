@@ -114,7 +114,10 @@
 				"strategy_guide": "攻略",
 				"participation-quota": "参与额度",
 				"presale-details": "预售详情",
-				"index-more": "更多"
+				"index-more": "更多",
+				"blind-details": "盲盒详情",
+				"blind-box-content": "盲盒内容",
+				"gameplay-introduction": "玩法介绍"
 			},
 			"blog": "博客",
 			"components": "组件",

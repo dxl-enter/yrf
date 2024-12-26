@@ -433,6 +433,31 @@ video {
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.5); /* 黑色半透明 */
 }
+.shadow-round-box {
+	width: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.shadow-round-box img {
+	display: block;
+	width: 100%;
+	border: 10px #000 solid;
+}
+.shadow-round {
+	position: relative;
+}
+.shadow-round:before {
+	content: '';
+	width: 160%;
+	height: 12%;
+	background: rgba(255, 255, 255, 0.5);
+	display: block;
+	top: 110%;
+	left: -30%;
+	position: absolute;
+	z-index: -1;
+	border-radius: 50%;
+	filter: blur(5px);
+}
 .ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
 .ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
 	background: linear-gradient(to right, #039161 0%, #30CFD0 100%) !important;

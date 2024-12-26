@@ -12,6 +12,7 @@ const WithdrawalRecord = lazy(() => import("@/pages/sys/others/withdrawal-record
 const CardDetails = lazy(() => import("@/pages/sys/others/card-cards/card-details/index"));
 const StrategyGuide = lazy(() => import("@/pages/sys/others/casting/components/strategy-guide"));
 const ParticipationQuota = lazy(() => import("@/pages/sys/others/casting/components/participation-quota"));
+const BlindDetails = lazy(() => import("@/pages/sys/others/blind-box/blind-details/index"));
 const PresaleDetails = lazy(() => import("@/pages/dashboard/workbench/presale-details"));
 const IndexMore = lazy(() => import("@/pages/dashboard/workbench/index-more"));
 
@@ -78,5 +79,13 @@ export const JumpRoutes: AppRouteObject = {
 				key: "/index-more",
 			},
 		},
+		{
+			path: "blind_details",
+			element: <BlindDetails />,
+			meta: {
+				label: "sys.menu.secondary-page.blind-details",
+				key: "/blind_details",
+			},
+		}
 	]
 };

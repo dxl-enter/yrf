@@ -115,7 +115,10 @@
 				"strategy_guide": "Strategy Guide",
 				"participation-quota": "Participation Quota",
 				"presale-details": "Presale Details",
-				"index-more": "More"
+				"index-more": "More",
+				"blind-details": "Blind Details",
+				"blind-box-content": "Blind Box Content",
+				"gameplay-introduction": "Gameplay Introduction"
 			},
 			"blog": "Blog",
 			"components": "Components",
