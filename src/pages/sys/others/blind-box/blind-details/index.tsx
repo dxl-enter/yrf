@@ -6,13 +6,19 @@ import { useState } from "react";
 import BlindBoxContent from "./components/blind-box-content";
 import GameplayIntroduction from "./components/gameplay-introduction";
 import { useTranslation } from "react-i18next";
-import { Tag } from "antd";
+import {Button, Tag} from "antd";
 import React from "react";
+import FooterSecondary from "@/layouts/_common/footer-secondary";
+import {useNavigate} from "react-router";
 
 function UserProfile() {
+	const navigatge = useNavigate();
 	const { avatar } = useUserInfo();
 	const [currentTabIndex, setcurrentTabIndex] = useState(0);
 	const { t } = useTranslation();
+	const goBuyNow = () => {
+		navigatge("/buy_now");
+	};
 	const bgStyle = {
 		background: `url(${CoverImage})`,
 		backgroundSize: "cover",
@@ -70,6 +76,15 @@ function UserProfile() {
 				</div>
 			</Card>
 			<div>{tabs[currentTabIndex].content}</div>
+			<FooterSecondary>
+				<Button
+					type="primary"
+					style={{ float: 'right' }}
+					onClick={goBuyNow}
+				>
+					立即购买
+				</Button>
+			</FooterSecondary>
 		</>
 	);
 }

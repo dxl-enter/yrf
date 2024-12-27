@@ -1,10 +1,12 @@
 import {Typography, Card} from "antd";
+import {useThemeToken} from "@/theme/hooks";
 
 export default function ChainInformation() {
+    const { colorPrimary } = useThemeToken();
     return (
-        <Card className="flex-col box-shadow-inset-green">
+        <Card className="flex-col">
             <header className="self-start gallery-text">
-                <Typography.Title level={5}>链上信息</Typography.Title>
+                <Typography.Title level={5} style={{ color: colorPrimary }}>链上信息</Typography.Title>
             </header>
             <section>
                 <p>卡牌名称：原创卡牌</p>

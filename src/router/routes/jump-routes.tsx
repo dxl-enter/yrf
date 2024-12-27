@@ -45,6 +45,7 @@ const BindSuperiors = lazy(
 const PerformanceInquiry = lazy(
 	() => import("@/pages/sys/others/my-team/components/performance-inquiry"),
 );
+const BuyNow = lazy(() => import("@/pages/sys/others/card-cards/card-details/components/buy-now"));
 
 /**
  * error routes
@@ -163,6 +164,14 @@ export const JumpRoutes: AppRouteObject = {
 			meta: {
 				label: "sys.menu.secondary-page.performance-inquiry",
 				key: "/performance_inquiry",
+			},
+		},
+		{
+			path: "buy_now",
+			element: <BuyNow />,
+			meta: {
+				label: "sys.menu.secondary-page.buy-now",
+				key: "/buy_now",
 			},
 		},
 	],

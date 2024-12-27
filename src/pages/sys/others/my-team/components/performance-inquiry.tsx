@@ -7,7 +7,7 @@ import {
 	Table,
 	Input,
 	Typography,
-	Col,
+	Col, Splitter,
 } from "antd";
 import type { FormProps } from "antd";
 import Card from "@/components/card";
@@ -108,24 +108,29 @@ export default function PerformanceInquiry() {
 		wrapperCol: { span: 16 },
 	};
 	return (
-		<div className="flex flex-col m-4">
-			<div className="w-full">
-				<Row
-					gutter={[16, 16]}
-					justify="space-between"
-					className="card box-shadow-red"
-				>
-					<Col span={8}>
-						<AnalysisTeam title="1.35m" subtitle="业绩总计" />
-					</Col>
-					<Col span={8}>
-						<AnalysisTeam title="1.72m" subtitle="盲盒总计" />
-					</Col>
-					<Col span={8}>
-						<AnalysisTeam title="234" subtitle="LP总计" />
-					</Col>
-				</Row>
-			</div>
+		<div className="w-full p-4">
+			<Card className="flex-col !p-0">
+				<Splitter className="">
+					<Splitter.Panel collapsible>
+						<div className="py-4 text-center">
+							<p className="text-l font-bold">业绩总计</p>
+							<p className="text-sm">1.35m</p>
+						</div>
+					</Splitter.Panel>
+					<Splitter.Panel collapsible={{ start: true }}>
+						<div className="py-4 text-center">
+							<p className="text-l font-bold">盲盒总计</p>
+							<p className="text-sm">1.35m</p>
+						</div>
+					</Splitter.Panel>
+					<Splitter.Panel>
+						<div className="py-4 text-center">
+							<p className="text-l font-bold">LP总计</p>
+							<p className="text-sm">1.35m</p>
+						</div>
+					</Splitter.Panel>
+				</Splitter>
+			</Card>
 			<Card className="flex-col mt-4">
 				<header className="self-start">
 					<Typography.Title level={5}>查询条件</Typography.Title>

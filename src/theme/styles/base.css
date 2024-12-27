@@ -365,6 +365,10 @@ video {
 }
 .theme-word {
 	color: #34a853;
+/*	 rgba(52, 168, 83)*/
+}
+.gradient-bottom {
+	background: linear-gradient(to bottom, rgba(0,140,255, 0.5) 0%, transparent 100%) !important;
 }
 .shadow__btn {
 	/* background: rgb(0,140,255); */
@@ -383,6 +387,9 @@ video {
 }
 .box-shadow-green {
 	box-shadow: 0 0 25px rgb(7, 116, 79) !important;
+}
+.box-shadow-grey {
+	box-shadow: 0 0 20px grey !important;
 }
 .box-shadow-inset-red {
 	box-shadow: inset 0 0 25px #EB22CB !important;

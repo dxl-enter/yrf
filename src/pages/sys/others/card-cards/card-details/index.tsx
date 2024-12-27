@@ -5,9 +5,14 @@ import ChainInformation from "./components/chain-information";
 import CardInformation from "./components/card-information";
 import PurchaseNotes from "./components/purchase-notes";
 import FooterSecondary from "@/layouts/_common/footer-secondary";
+import {useNavigate} from "react-router";
+import BuyNow from "@/pages/sys/others/card-cards/card-details/components/buy-now";
 
 export default function CardDetails() {
-
+	const navigatge = useNavigate();
+	const goBuyNow = () => {
+		navigatge("/buy_now");
+	};
 	return (
 		<div>
 			<div className="p-2 mb-[50px]">
@@ -35,8 +40,8 @@ export default function CardDetails() {
 			<FooterSecondary>
 				<Button
 					type="primary"
-					className="shadow__btn"
 					style={{ float: 'right' }}
+					onClick={goBuyNow}
 				>
 					立即购买
 				</Button>

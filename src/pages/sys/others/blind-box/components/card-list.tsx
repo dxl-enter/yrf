@@ -7,20 +7,21 @@ export default function CardList() {
 	};
 	const cardStyle = {
 		width: "100%",
+		marginBottom: '16px',
 	};
 	const imgStyle = {
 		display: "block",
 		width: "100%",
 		borderRadius: "8px 8px 0 0",
 	};
-	const contentStyle: React.CSSProperties = {
+	const contentStyle = {
 		width: "80vw",
 		margin: "16px auto",
 		padding: "0 16px 0 0",
 		justifyContent: "flex-end",
 	};
 	return (
-		<div className="w-full">
+		<div className="w-full px-4">
 			<Card
 				hoverable
 				style={cardStyle}
@@ -50,7 +51,7 @@ export default function CardList() {
 							发售中
 						</Tag>
 					</div>
-					<Carousel dotPosition="bottom" style={contentStyle} className="card">
+					<Carousel dotPosition="bottom" style={contentStyle} className="box-shadow-inset-green">
 						<div>
 							<div className="flex flex-row items-center">
 								<img
@@ -78,8 +79,7 @@ export default function CardList() {
 					<Flex
 						align="flex-end"
 						justify="space-between"
-						className="w-full"
-						style={{ padding: 32 }}
+						className="w-full px-4 py-4"
 					>
 						<div>
 							<Typography.Title level={4}>牧师盲盒</Typography.Title>
@@ -126,7 +126,7 @@ export default function CardList() {
 							已售罄
 						</div>
 					</div>
-					<Carousel dotPosition="bottom" style={contentStyle} className="card">
+					<Carousel dotPosition="bottom" style={contentStyle} className="box-shadow-inset-green">
 						<div>
 							<div className="flex flex-row items-center">
 								<img
@@ -154,8 +154,7 @@ export default function CardList() {
 					<Flex
 						align="flex-end"
 						justify="space-between"
-						className="w-full"
-						style={{ padding: 32 }}
+						className="w-full px-4 py-4"
 					>
 						<div>
 							<Typography.Title level={4}>牧师盲盒</Typography.Title>

@@ -54,7 +54,7 @@ export default function BlindBoxContent() {
 				style={{ color: theme.colorPrimary }}
 			>
 				<Typography.Title level={5}>倍数介绍</Typography.Title>
-				<p>.......................</p>
+				<p>介绍</p>
 			</div>
 		</Card>
 	);
