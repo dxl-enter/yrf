@@ -26,3 +26,6 @@ pnpm build
 
 git commit -m  时报错Checked 19 files in 15ms. No fixes applied.
 解决：git commit --no-verify -m "提交"
+
+
+https://apexcharts.com/docs/options/legend/

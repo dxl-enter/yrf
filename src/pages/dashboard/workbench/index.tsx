@@ -9,7 +9,7 @@ import MyTeam from "@/pages/dashboard/workbench/my-team";
 import MyInvitation from "@/pages/dashboard/workbench/my-invitation";
 
 function Workbench() {
-	const contentStyle: React.CSSProperties = {
+	const contentStyle = {
 		height: "160px",
 		color: "#fff",
 		lineHeight: "160px",
