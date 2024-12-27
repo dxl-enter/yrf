@@ -1,12 +1,14 @@
 import Card from "@/components/card";
 import { Button, Typography } from "antd";
+import {useThemeToken} from "@/theme/hooks";
 
 export default function ProjectPlanning() {
+	const { colorPrimary } = useThemeToken();
 	return (
 		<Card className="flex-col">
 			<div className="w-full">
 				<header className="self-start">
-					<Typography.Title level={5}>项目规划</Typography.Title>
+					<Typography.Title level={5} style={{ color: colorPrimary }}>项目规划</Typography.Title>
 				</header>
 				<main className="w-full">
 					<p>2024Q1</p>
@@ -17,7 +19,7 @@ export default function ProjectPlanning() {
 							</li>
 						))}
 					</ul>
-					<Button className="mt-4 w-full shadow__btn" type="primary" shape="round">
+					<Button ghost className="mt-4 w-full" type="primary" shape="round">
 						继续查看白皮书
 					</Button>
 				</main>

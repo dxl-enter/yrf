@@ -363,13 +363,16 @@ video {
 [hidden] {
 	display: none;
 }
+.theme-word {
+	color: #34a853;
+}
 .shadow__btn {
 	/* background: rgb(0,140,255); */
 	background: linear-gradient(to right, #EB22CB 0%, #30CFD0 100%) !important;
 	box-shadow: 0 0 25px rgb(0,140,255) !important;
 }
 .shadow__btn-green {
-	background: linear-gradient(to right, #039161 0%, #30CFD0 100%) !important;
+	background: linear-gradient(to right, #34a853 0%, #30CFD0 100%) !important;
 	box-shadow: 0 0 25px rgb(7, 116, 79) !important;
 }
 .shadow__btn-blue {
@@ -460,7 +463,7 @@ video {
 }
 .ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
 .ant-radio-group-solid .css-dev-only-do-not-override-3qc8a6.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-	background: linear-gradient(to right, #039161 0%, #30CFD0 100%) !important;
+	background: linear-gradient(to right, #34a853 0%, #30CFD0 100%) !important;
 	box-shadow: 0 0 25px rgb(7, 116, 79) !important;
 }
 .ant-progress-circle {

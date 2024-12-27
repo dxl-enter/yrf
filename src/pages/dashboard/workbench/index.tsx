@@ -17,7 +17,7 @@ function Workbench() {
 		background: "#364d79",
 	};
 	return (
-		<div className="p-2">
+		<div>
 			<Carousel dotPosition="bottom">
 				<div>
 					<h3 style={contentStyle}>1</h3>
@@ -33,8 +33,8 @@ function Workbench() {
 				</div>
 			</Carousel>
 
-			<Row gutter={[16, 16]} className="mt-4" justify="center" id="part-1">
-				<Col span={24} md={24}>
+			<div className="p-2">
+				<div className="mt-[-24px]" justify="center">
 					<Card className="w-full">
 						<h3 className="flex justify-between items-center">
 							<div>CSC代币预售</div>
@@ -44,37 +44,37 @@ function Workbench() {
 							<ParticipatePresale />
 						</Col>
 					</Card>
-				</Col>
-			</Row>
-			<Row gutter={[16, 16]} className="mt-4" justify="center">
-				<Col span={24} md={24}>
-					<Notice />
-				</Col>
-			</Row>
-			<Row gutter={[16, 16]} className="mt-4" justify="center">
-				<Col span={24} md={24}>
-					<MyTeam />
-				</Col>
-			</Row>
-			<Row gutter={[16, 16]} className="mt-4" justify="center" id="part-2">
-				<Col span={24} md={24}>
-					<MyInvitation />
-				</Col>
-			</Row>
-			<Row gutter={[16, 16]} className="mt-4" justify="center" id="part-3">
-				<Col span={24} md={12}>
-					<TokenStatistics />
-				</Col>
+				</div>
+				<Row gutter={[16, 16]} justify="center">
+					<Col span={24} md={24}>
+						<Notice />
+					</Col>
+				</Row>
+				<Row gutter={[16, 16]} className="mt-4" justify="center">
+					<Col span={24} md={24}>
+						<MyTeam />
+					</Col>
+				</Row>
+				<Row gutter={[16, 16]} className="mt-4" justify="center" id="part-2">
+					<Col span={24} md={24}>
+						<MyInvitation />
+					</Col>
+				</Row>
+				<Row gutter={[16, 16]} className="mt-4" justify="center" id="part-3">
+					<Col span={24} md={12}>
+						<TokenStatistics />
+					</Col>
 
-				<Col span={24} md={12}>
-					<ProjectPlanning />
-				</Col>
-			</Row>
-			<Row gutter={[16, 16]} className="mt-4" justify="center">
-				<Col span={24} md={24}>
-					<CooperativePartner />
-				</Col>
-			</Row>
+					<Col span={24} md={12}>
+						<ProjectPlanning />
+					</Col>
+				</Row>
+				<Row gutter={[16, 16]} className="mt-4" justify="center">
+					<Col span={24} md={24}>
+						<CooperativePartner />
+					</Col>
+				</Row>
+			</div>
 		</div>
 	);
 }

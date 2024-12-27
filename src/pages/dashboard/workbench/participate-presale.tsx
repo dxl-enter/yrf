@@ -25,7 +25,7 @@ export default function ParticipatePresale() {
 				<Col span={6} md={6}>
 					<Button
 						type="primary"
-						className="items-center shadow__btn"
+						className="items-center"
 						style={{ height: "60px" }}
 						onClick={onPresaleDetails}
 					>

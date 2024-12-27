@@ -1,10 +1,12 @@
 import Chart from "@/components/chart/chart";
 import useChart from "@/components/chart/useChart";
 import { fNumber } from "@/utils/format-number";
-import {Card} from "antd";
+import {Card, Typography} from "antd";
+import {useThemeToken} from "@/theme/hooks";
 
 const series = [44, 55];
 export default function ChartRadial() {
+    const { colorPrimary } = useThemeToken();
     const chartOptions = useChart({
         chart: {
             sparkline: {
@@ -36,6 +38,9 @@ export default function ChartRadial() {
 
     return (
         <Card>
+            <header className="self-start">
+                <Typography.Title style={{ color: colorPrimary }} level={5}>CSC代币统计</Typography.Title>
+            </header>
             <Chart
                 type="radialBar"
                 series={series}
