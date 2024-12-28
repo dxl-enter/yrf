@@ -1,10 +1,10 @@
-import { CSSProperties, ReactNode } from "react/index";
+import { CSSProperties, ReactNode } from "react";
 import { Typography } from "antd";
 import { useThemeToken } from "@/theme/hooks";
 
 type Props = {
 	children?: ReactNode;
-	level?: string;
+	level?: number;
 	className?: string;
 	style?: CSSProperties;
 };
