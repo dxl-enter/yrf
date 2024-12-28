@@ -6,20 +6,15 @@ import { useState } from "react";
 import BlindBoxContent from "./components/blind-box-content";
 import GameplayIntroduction from "./components/gameplay-introduction";
 import { useTranslation } from "react-i18next";
-import {Button, Tag, Typography} from "antd";
-import React from "react";
+import {Button, Tag, Typography, Drawer} from "antd";
 import FooterSecondary from "@/layouts/_common/footer-secondary";
-import {useNavigate} from "react-router";
+import { CloseCircleOutlined } from '@ant-design/icons';
 
 
 function UserProfile() {
-	const navigatge = useNavigate();
 	const { avatar } = useUserInfo();
 	const [currentTabIndex, setcurrentTabIndex] = useState(0);
 	const { t } = useTranslation();
-	const goBuyNow = () => {
-		navigatge("/buy_now");
-	};
 	const bgStyle = {
 		background: `url(${CoverImage})`,
 		backgroundSize: "cover",
@@ -39,6 +34,14 @@ function UserProfile() {
 			content: <GameplayIntroduction />,
 		},
 	];
+	const [open, setOpen] = useState(false);
+	const showDrawer = () => {
+		setOpen(true);
+	  };
+	
+	  const onClose = () => {
+		setOpen(false);
+	  };
 
 	return (
 		<>
@@ -77,16 +80,52 @@ function UserProfile() {
 				</div>
 			</Card>
 			<div>{tabs[currentTabIndex].content}</div>
-			<FooterSecondary>
-				<Typography.Title style={{float: 'left', marginBottom: 0}} level={4}>124USDT</Typography.Title>
-				<Button
-					type="primary"
-					style={{ float: 'right' }}
-					onClick={goBuyNow}
+			{
+				open ? (
+				<Drawer
+					placement="right"
+					closable={false}
+					onClose={onClose}
+					open={open}
+					getContainer={false}
+					styles={{
+						body: {
+							margin: "0",
+							padding: "0",
+						},
+					}}
 				>
-					立即购买
-				</Button>
-			</FooterSecondary>
+					<div
+						style={{
+							color: "#fff"
+						}}
+						className="absolute flex h-full w-full flex-col items-center justify-center"
+					>
+						<Typography.Title level={5}>恭喜您获得</Typography.Title>
+						<Typography.Title level={3}>牧师系列盲盒</Typography.Title>
+						<p>魔方盲盒正在发放中，请耐心等待</p>
+						<img
+							alt="avatar"
+							src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+							width="200px"
+							className="my-[32px]"
+						/>
+						<Button type="primary" ghost>点我查看</Button>
+						<CloseCircleOutlined onClick={onClose} style={{ fontSize: '32px' }} className="mt-6" />
+					</div>
+				</Drawer>) : (
+					<FooterSecondary>
+						<Typography.Title style={{float: 'left', marginBottom: 0}} level={4}>124USDT</Typography.Title>
+						<Button
+							type="primary"
+							style={{ float: 'right' }}
+							onClick={showDrawer}
+						>
+							立即购买
+						</Button>
+					</FooterSecondary>
+				)
+			}
 		</>
 	);
 }
