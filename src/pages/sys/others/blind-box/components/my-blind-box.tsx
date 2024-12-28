@@ -29,7 +29,7 @@ export default function MyBlindBox() {
 					</div>
 				</Splitter.Panel>
 				<Splitter.Panel>
-					<div className="card text-center" onClick={onMyTeam}>
+					<div className="py-4 text-center" onClick={onMyTeam}>
 						<p className="text-l font-bold">我的</p>
 						<p className="text-l font-bold">推荐</p>
 					</div>
