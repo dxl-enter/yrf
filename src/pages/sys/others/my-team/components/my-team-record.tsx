@@ -120,25 +120,18 @@ export default function MyTeamRecord() {
 		labelCol: { span: 5 },
 		wrapperCol: { span: 16 },
 	};
+	const cardOperations = [
+		{ subtitle: '团队收益', title: '714k' },
+		{ subtitle: '我的收益', title: '1.35m' },
+		{ subtitle: '盲盒收益', title: '1.72m' },
+		{ subtitle: 'LP收益', title: '234' },
+	];
 	return (
 		<div className="flex flex-col m-4">
 			<div className="w-full">
-				<Row
-					gutter={[16, 16]}
-					justify="space-between"
-					className="card box-shadow-red"
-				>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="714k" subtitle="团队收益" />
-					</Col>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="1.35m" subtitle="我的收益" />
-					</Col>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="1.72m" subtitle="盲盒收益" />
-					</Col>
-					<Col lg={6} md={6} span={6}>
-						<AnalysisTeam title="234" subtitle="LP收益" />
+				<Row gutter={[16, 16]} className="mt-4" justify="center">
+					<Col span={24} md={24}>
+						<AnalysisTeam operations={cardOperations} />
 					</Col>
 				</Row>
 			</div>
