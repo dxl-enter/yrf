@@ -1,5 +1,6 @@
-import { Card, Typography, Table } from "antd";
+import { Card, Table } from "antd";
 import Scrollbar from "@/components/scrollbar";
+import PageTitle from "@/components/page-title";
 
 interface DataType {
 	key: string;
@@ -69,7 +70,7 @@ export default function MyTeamPush() {
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
-				<Typography.Title level={5}>我的直推</Typography.Title>
+				<PageTitle>我的直推</PageTitle>
 			</header>
 			<main className="w-full">
 				<Scrollbar>

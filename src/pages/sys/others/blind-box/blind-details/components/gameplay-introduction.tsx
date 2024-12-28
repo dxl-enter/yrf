@@ -1,6 +1,7 @@
 import { Card, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import { faker } from "@faker-js/faker";
+import PageTitle from "@/components/page-title";
 
 export default function GameplayIntroduction() {
 	const { t } = useTranslation();
@@ -25,9 +26,9 @@ export default function GameplayIntroduction() {
 	return (
 		<Card className="flex-col">
 			<div className="flex w-full flex-col">
-				<Typography.Title level={5}>
+				<PageTitle>
 					{t("sys.menu.secondary-page.gameplay-introduction")}
-				</Typography.Title>
+				</PageTitle>
 				<Typography.Text>{faker.lorem.paragraph()}</Typography.Text>
 
 				<div className="mt-2 flex flex-col gap-4">

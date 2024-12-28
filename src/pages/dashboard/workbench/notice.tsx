@@ -1,6 +1,7 @@
-import { Row, Col, Carousel, Card, Image, Typography, Button } from "antd";
+import { Row, Col, Carousel, Card, Image, Button } from "antd";
 import { NotificationOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router";
+import PageTitle from "@/components/page-title";
 
 export default function Notice() {
 	const navigatge = useNavigate();
@@ -34,24 +35,19 @@ export default function Notice() {
 				</Col>
 			</Row>
 			<Card>
-				<Row
-					gutter={[16, 16]}
-					type="flex"
-					justify="space-between"
-				>
+				<Row gutter={[16, 16]} type="flex" justify="space-between">
 					<Col span={12} md={12}>
-						<div className="box-shadow-inset-green p-4 rounded-lg" style={{ height: "100%" }}>
+						<div
+							className="box-shadow-inset-green p-4 rounded-lg"
+							style={{ height: "225px" }}
+						>
 							<header className="self-start">
-								<Typography.Title level={5}>LP流量池铸造</Typography.Title>
+								<PageTitle>LP流量池铸造</PageTitle>
 							</header>
 							<section className="self-start">
 								<p>今日铸造额度剩余</p>
 								<p>500 USDT</p>
-								<Button
-									type="primary"
-									className="mt-4"
-									onClick={onCasting}
-								>
+								<Button type="primary" className="mt-4" onClick={onCasting}>
 									参与铸造
 								</Button>
 							</section>
@@ -67,6 +63,7 @@ export default function Notice() {
 						<Image
 							width="100%"
 							height="100px"
+							className="mt-4"
 							src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
 							onClick={onMore}
 						/>

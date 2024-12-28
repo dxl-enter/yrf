@@ -1,16 +1,20 @@
-import {Button, Card, Col, Row, Splitter, Typography} from "antd";
+import { Button, Card, Splitter } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import CastingPeogressItem from "@/pages/sys/others/casting/components/casting-peogress-item";
+import PageTitle from "@/components/page-title";
 
 export default function ParticipationQuota() {
 	return (
 		<div className="w-full p-4">
-			<Card className="flex-col" styles={{
-				body: {
-					alignItems: "center",
-					padding: "0",
-				},
-			}}>
+			<Card
+				className="flex-col"
+				styles={{
+					body: {
+						alignItems: "center",
+						padding: "0",
+					},
+				}}
+			>
 				<Splitter className="">
 					<Splitter.Panel collapsible>
 						<div className="py-4 text-center">
@@ -36,7 +40,7 @@ export default function ParticipationQuota() {
 				{new Array(2).fill("").map((_) => (
 					<div key={_}>
 						<header className="self-start flex items-center justify-between">
-							<Typography.Title level={5}>2024-12-24 11:44</Typography.Title>
+							<PageTitle>2024-12-24 11:44</PageTitle>
 							<Button type="link" ghost icon={<QuestionCircleOutlined />}>
 								铸造中
 							</Button>

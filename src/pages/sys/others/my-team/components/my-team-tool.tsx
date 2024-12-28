@@ -1,8 +1,9 @@
-import { Card, Col, Row, Typography } from "antd";
+import { Card, Col, Row } from "antd";
 import { useThemeToken } from "@/theme/hooks";
 import AnalysisCard from "@/pages/sys/others/my-team/components/analysis-card";
 import Color from "color";
 import { useNavigate } from "react-router";
+import PageTitle from "@/components/page-title";
 
 export default function MyTeamTool() {
 	const theme = useThemeToken();
@@ -19,7 +20,7 @@ export default function MyTeamTool() {
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
-				<Typography.Title level={5}>我的工具</Typography.Title>
+				<PageTitle>我的工具</PageTitle>
 			</header>
 			<section className="w-full mt-4">
 				<Row gutter={[16, 16]} justify="center">

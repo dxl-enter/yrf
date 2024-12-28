@@ -1,5 +1,6 @@
 import { Card, Carousel, Flex, Tag, Typography } from "antd";
 import { useNavigate } from "react-router";
+import PageTitle from "@/components/page-title";
 export default function CardList() {
 	const navigatge = useNavigate();
 	const goBlindDetails = () => {
@@ -7,7 +8,7 @@ export default function CardList() {
 	};
 	const cardStyle = {
 		width: "100%",
-		marginBottom: '16px',
+		marginBottom: "16px",
 	};
 	const imgStyle = {
 		display: "block",
@@ -51,7 +52,11 @@ export default function CardList() {
 							发售中
 						</Tag>
 					</div>
-					<Carousel dotPosition="bottom" style={contentStyle} className="box-shadow-inset-green">
+					<Carousel
+						dotPosition="bottom"
+						style={contentStyle}
+						className="box-shadow-inset-green"
+					>
 						<div>
 							<div className="flex flex-row items-center">
 								<img
@@ -61,7 +66,7 @@ export default function CardList() {
 									style={{ borderRadius: "8px 0 0 8px" }}
 								/>
 								<div className="ml-2">
-									<Typography.Title level={5}>什么是盲盒</Typography.Title>
+									<PageTitle>什么是盲盒</PageTitle>
 									<p>平台宣传活动</p>
 								</div>
 							</div>
@@ -82,7 +87,7 @@ export default function CardList() {
 						className="w-full px-4 py-4"
 					>
 						<div>
-							<Typography.Title level={4}>牧师盲盒</Typography.Title>
+							<PageTitle>牧师盲盒</PageTitle>
 							<p>
 								<Tag color="#2db7f5">倍数</Tag>
 								<Tag color="#87d068">限时优先购</Tag>
@@ -126,7 +131,11 @@ export default function CardList() {
 							已售罄
 						</div>
 					</div>
-					<Carousel dotPosition="bottom" style={contentStyle} className="box-shadow-inset-green">
+					<Carousel
+						dotPosition="bottom"
+						style={contentStyle}
+						className="box-shadow-inset-green"
+					>
 						<div>
 							<div className="flex flex-row items-center">
 								<img
@@ -136,7 +145,7 @@ export default function CardList() {
 									style={{ borderRadius: "8px 0 0 8px" }}
 								/>
 								<div className="ml-2">
-									<Typography.Title level={5}>什么是盲盒</Typography.Title>
+									<PageTitle>什么是盲盒</PageTitle>
 									<p>平台宣传活动</p>
 								</div>
 							</div>

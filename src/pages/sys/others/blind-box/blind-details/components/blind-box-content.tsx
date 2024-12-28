@@ -1,8 +1,9 @@
 import { Iconify } from "@/components/icon";
 import { faker } from "@faker-js/faker";
-import { Card, Tag, Typography } from "antd";
+import { Card, Tag } from "antd";
 import { useThemeToken } from "@/theme/hooks";
 import { useTranslation } from "react-i18next";
+import PageTitle from "@/components/page-title";
 
 export default function BlindBoxContent() {
 	const theme = useThemeToken();
@@ -32,9 +33,7 @@ export default function BlindBoxContent() {
 	return (
 		<Card className="flex-col !items-start">
 			<div className="flex w-full items-center justify-between">
-				<Typography.Title level={5}>
-					{t("sys.menu.secondary-page.blind-box-content")}
-				</Typography.Title>
+				<PageTitle>{t("sys.menu.secondary-page.blind-box-content")}</PageTitle>
 				<Tag color="warning">你可能抽到以下商品中的任意一款</Tag>
 			</div>
 			<div className="mt-2 flex w-full flex-col gap-4">
@@ -53,7 +52,7 @@ export default function BlindBoxContent() {
 				className="mt-4 w-full text-lg"
 				style={{ color: theme.colorPrimary }}
 			>
-				<Typography.Title level={5}>倍数介绍</Typography.Title>
+				<PageTitle>倍数介绍</PageTitle>
 				<p>介绍</p>
 			</div>
 		</Card>

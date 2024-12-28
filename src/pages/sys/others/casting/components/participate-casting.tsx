@@ -1,7 +1,8 @@
-import {Typography, Button, Tag} from "antd";
+import { Button, Tag } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import ParticipateCastingItem from "@/pages/sys/others/casting/components/participate-casting-item";
 import { useNavigate } from "react-router";
+import PageTitle from "@/components/page-title";
 
 export default function ParticipateCasting() {
 	const navigatge = useNavigate();
@@ -11,7 +12,9 @@ export default function ParticipateCasting() {
 	return (
 		<div className="flex-col">
 			<header className="self-start flex items-center justify-between">
-				<Typography.Title level={5}>参与铸造<Tag color="green">剩余350USDT</Tag></Typography.Title>
+				<PageTitle>
+					参与铸造<Tag color="green">剩余350USDT</Tag>
+				</PageTitle>
 
 				<Button
 					type="link"

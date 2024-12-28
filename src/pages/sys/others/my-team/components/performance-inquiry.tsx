@@ -2,17 +2,15 @@ import {
 	Button,
 	DatePicker,
 	Form,
-	Row,
 	Select,
 	Table,
 	Input,
-	Typography,
-	Col, Splitter,
+	Splitter,
 } from "antd";
 import type { FormProps } from "antd";
 import Card from "@/components/card";
 import Scrollbar from "@/components/scrollbar";
-import AnalysisTeam from "@/pages/dashboard/workbench/analysis-team";
+import PageTitle from "@/components/page-title";
 const { RangePicker } = DatePicker;
 interface DataType {
 	key: string;
@@ -133,7 +131,7 @@ export default function PerformanceInquiry() {
 			</Card>
 			<Card className="flex-col mt-4">
 				<header className="self-start">
-					<Typography.Title level={5}>查询条件</Typography.Title>
+					<PageTitle>查询条件</PageTitle>
 				</header>
 				<Form
 					{...layout}

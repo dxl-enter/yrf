@@ -1,6 +1,7 @@
-import { Button, Card, Input, QRCode, Typography } from "antd";
+import { Button, Card, Input, QRCode } from "antd";
 import { useCopyToClipboard } from "@/hooks/event/use-copy-to-clipboard";
 import { useState } from "react";
+import PageTitle from "@/components/page-title";
 
 export default function InvitationCode() {
 	const { copyFn } = useCopyToClipboard();
@@ -9,7 +10,7 @@ export default function InvitationCode() {
 		<div className="m-4">
 			<Card className="flex-col">
 				<header className="self-start">
-					<Typography.Title level={5}>邀请好友</Typography.Title>
+					<PageTitle>邀请好友</PageTitle>
 				</header>
 				<div className="mt-4">
 					<Input value={value} disabled />
@@ -25,7 +26,7 @@ export default function InvitationCode() {
 			</Card>
 			<Card className="flex-col" style={{ marginTop: 16 }}>
 				<header className="self-start">
-					<Typography.Title level={5}>保存二维码</Typography.Title>
+					<PageTitle>保存二维码</PageTitle>
 				</header>
 				<div className="flex w-full flex-col items-center justify-center">
 					<QRCode value="https://ant.design/" size={200} />

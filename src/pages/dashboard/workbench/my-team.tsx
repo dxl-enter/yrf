@@ -1,11 +1,10 @@
-import { Row, Col, Typography, Card, Button } from "antd";
+import { Row, Col, Card, Button } from "antd";
 import AnalysisTeam from "./analysis-team";
 import { RightOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router";
-import {useThemeToken} from "@/theme/hooks";
+import PageTitle from "@/components/page-title";
 
 export default function MyTeam() {
-	const { colorPrimary } = useThemeToken();
 	const navigatge = useNavigate();
 	const goMyTeam = () => {
 		navigatge("/my_team");
@@ -13,7 +12,7 @@ export default function MyTeam() {
 	return (
 		<Card className="flex-col">
 			<header className="self-start flex items-center justify-between">
-				<Typography.Title level={5} style={{ color: colorPrimary }}>我的团队</Typography.Title>
+				<PageTitle>我的团队</PageTitle>
 				<Button
 					type="link"
 					ghost
