@@ -84,7 +84,7 @@ function UserProfile() {
 					</div>
 				</div>
 			</Card>
-			<div>{tabs[currentTabIndex].content}</div>
+			<div style={{marginBottom: '70px'}}>{tabs[currentTabIndex].content}</div>
 			{
 				open ? (
 				<Drawer
