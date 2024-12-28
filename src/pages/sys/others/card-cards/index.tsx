@@ -1,5 +1,4 @@
 import {Col, Row} from "antd";
-import type React from "react";
 import BriefIntroduction from "@/pages/sys/others/card-cards/components/brief-introduction";
 import CardOperate from "@/pages/sys/others/card-cards/components/card-operate";
 import CardList from "@/pages/sys/others/card-cards/components/card-list";

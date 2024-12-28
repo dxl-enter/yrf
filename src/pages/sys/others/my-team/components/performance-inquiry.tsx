@@ -43,7 +43,7 @@ export default function PerformanceInquiry() {
 			title: "时间",
 			dataIndex: "id",
 			key: "id",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "地址",
@@ -54,13 +54,13 @@ export default function PerformanceInquiry() {
 			title: "类型",
 			dataIndex: "price",
 			key: "price",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "金额",
 			dataIndex: "price",
 			key: "price",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 	];
 

@@ -1,5 +1,3 @@
-
-import React from "react";
 import {Card} from "antd";
 import {useNavigate} from "react-router";
 const { Meta } = Card;

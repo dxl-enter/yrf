@@ -35,7 +35,7 @@ export default function Notice() {
 				</Col>
 			</Row>
 			<Card>
-				<Row gutter={[16, 16]} type="flex" justify="space-between">
+				<Row gutter={[16, 16]} justify="space-between">
 					<Col span={12} md={12}>
 						<div
 							className="box-shadow-inset-green p-4 rounded-lg"

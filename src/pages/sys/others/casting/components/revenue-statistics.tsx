@@ -1,5 +1,4 @@
-import {Row, Col, Card, Splitter} from "antd";
-import RevenueItem from "./revenue-item";
+import {Card, Splitter} from "antd";
 import {useNavigate} from "react-router";
 
 export default function RevenueStatistics() {

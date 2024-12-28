@@ -32,7 +32,7 @@ export default function RecordTable() {
 			title: "时间",
 			dataIndex: "id",
 			key: "id",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "操作",
@@ -43,13 +43,13 @@ export default function RecordTable() {
 			title: "类型",
 			dataIndex: "price",
 			key: "price",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "金额",
 			key: "status",
 			dataIndex: "status",
-			render: (_status) => {
+			render: (_status:any) => {
 				const status = _status as string;
 				let color = "success";
 				if (status === "Progress") color = "gold";

@@ -4,7 +4,7 @@ import { useThemeToken } from "@/theme/hooks";
 
 type Props = {
 	children?: ReactNode;
-	level?: number;
+	level?: any;
 	className?: string;
 	style?: CSSProperties;
 };

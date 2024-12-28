@@ -1,4 +1,3 @@
-import React from 'react';
 import {Input, Tag} from 'antd';
 import type { GetProps } from 'antd';
 type SearchProps = GetProps<typeof Input.Search>;

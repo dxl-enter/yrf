@@ -46,7 +46,7 @@ export default function MyTeamRecord() {
 			title: "时间",
 			dataIndex: "id",
 			key: "id",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "地址",
@@ -57,13 +57,13 @@ export default function MyTeamRecord() {
 			title: "生态类型",
 			dataIndex: "price",
 			key: "price",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "收益类型",
 			key: "status",
 			dataIndex: "status",
-			render: (_status) => {
+			render: (_status:any) => {
 				const status = _status as string;
 				let color = "success";
 				if (status === "Progress") color = "gold";
@@ -75,7 +75,7 @@ export default function MyTeamRecord() {
 			title: "金额",
 			dataIndex: "price",
 			key: "price",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 	];
 

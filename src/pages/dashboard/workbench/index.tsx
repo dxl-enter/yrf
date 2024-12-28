@@ -35,7 +35,7 @@ function Workbench() {
 			</Carousel>
 
 			<div className="p-2">
-				<div className="mt-[-24px]" justify="center">
+				<div className="mt-[-24px]">
 					<Card className="w-full">
 						<h3 className="flex justify-between items-center">
 							<div>CSC代币预售</div>

@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next";
 export default function HeaderSecondary() {
 	const { t } = useTranslation();
 	const navigatge = useNavigate();
-	const matches = useMatches();
+	const matches: any = useMatches();
 	const routePath = matches.at(-1).pathname;
-	const JumpArr = [...JumpRoutes.children];
-	const JumpList =
+	const JumpArr = JumpRoutes.children;
+	const JumpList: any =
 		JumpArr?.find((item) => {
 			console.log(item.meta?.key, routePath);
 			return item.meta?.key === routePath;

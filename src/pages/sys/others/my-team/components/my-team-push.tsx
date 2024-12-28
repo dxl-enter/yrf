@@ -15,7 +15,7 @@ export default function MyTeamPush() {
 			title: "邀请时间",
 			dataIndex: "id",
 			key: "id",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 		{
 			title: "地址",
@@ -26,7 +26,7 @@ export default function MyTeamPush() {
 			title: "状态",
 			dataIndex: "price",
 			key: "price",
-			render: (text) => <span>{text}</span>,
+			render: (text:any) => <span>{text}</span>,
 		},
 	];
 

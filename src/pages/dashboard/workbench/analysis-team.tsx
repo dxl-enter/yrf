@@ -1,7 +1,8 @@
 import {Card, Splitter} from "antd";
 import React from "react";
+
 interface CardOperateProps {
-    operations: Array<{ title: string; subtitle: string; onClick: () => void }>;
+    operations: Array<{ subtitle: string; title: string; onClick?: () => void }>;
 }
 const AnalysisTeam: React.FC<CardOperateProps> = ({ operations = [] }) => {
 	return (

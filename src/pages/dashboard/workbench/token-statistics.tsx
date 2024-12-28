@@ -7,7 +7,7 @@ import PageTitle from "@/components/page-title";
 const series = [44, 55, 67, 83];
 
 export default function ChartRadial() {
-	const chartOptions = useChart({
+	const chartOptions: any = useChart({
 		chart: {
 			type: "radialBar",
 		},
@@ -22,11 +22,7 @@ export default function ChartRadial() {
 					},
 					total: {
 						show: true,
-						label: "Total",
-						formatter: function (w) {
-							// By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-							return 249;
-						},
+						label: "Total"
 					},
 				},
 				track: {
@@ -59,7 +55,6 @@ export default function ChartRadial() {
 				gutter={[0, 0]}
 				className="self-start w-full"
 				justify="space-between"
-				align="center"
 			>
 				<Col span={15}>
 					<Chart
@@ -72,7 +67,7 @@ export default function ChartRadial() {
 				</Col>
 				<Col span={9}>
 					<main className="grid grid-cols-2 h-full gap-x-4 mx-auto">
-						{chartOptions.colors.map((color, index) => (
+						{chartOptions.colors.map((color: string, index: number) => (
 							<div key={index} className="flex flex-col items-center">
 								<span>
 									<HeartTwoTone twoToneColor={color} />

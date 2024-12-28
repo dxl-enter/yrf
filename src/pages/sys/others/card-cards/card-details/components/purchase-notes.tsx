@@ -1,5 +1,4 @@
 import { Card } from "antd";
-import React from "react";
 import PageTitle from "@/components/page-title";
 
 export default function PurchaseNotes() {

@@ -28,10 +28,8 @@ import cambodia from "@/assets/images/index/cambodia.ed3239e4.png";
 import UAE from "@/assets/images/index/UAE.jpg";
 
 import our from "@/assets/images/index/our.png";
-import {useThemeToken} from "@/theme/hooks";
 
 export default function CooperativePartner() {
-	const { colorPrimary } = useThemeToken();
 	const partners = [
 		{
 			href: "https://coinweblabs.io/",
@@ -213,7 +211,7 @@ export default function CooperativePartner() {
 				<Typography.Title level={3} className="text-center">合作伙伴</Typography.Title>
 				<main className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
 					{partners.map((_) => (
-						<a key={_} href={_.href} target="_blank">
+						<a key={_.name} href={_.href} target="_blank">
 							<div className="rounded-[32px] px-6 py-6 h-full bg-gradient-to-r from-[#047CFD]/[10%] to-[#31B8F6]/[10%] border-r-2 border-r-[#ffffff]/[46%] text-center text-white">
 								<h3 className="text-sm uppercase hidden md:block">
 									{_.name}
@@ -232,7 +230,7 @@ export default function CooperativePartner() {
 				<Typography.Title level={3} className="text-center">加入社区</Typography.Title>
 				<main className="mt-6 grid grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-10 mx-auto">
 					{worlds.map((_) => (
-						<a key={_} href={_.href} target="_blank">
+						<a key={_.name} href={_.href} target="_blank">
 							<div className="text-center">
 								<img
 									className="mx-auto w-8 h-8 md:w-12 md:h-12"
