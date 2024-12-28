@@ -1,7 +1,4 @@
-import Card from "@/components/card";
 import { Typography } from "antd";
-import { faker } from "@faker-js/faker";
-import { Iconify } from "@/components/icon";
 import coinweb from "@/assets/images/index/coinweb.77fcda7c.svg";
 import certik from "@/assets/images/index/certik-logo.e72652f9.svg";
 import benzinga from "@/assets/images/index/benzinga.ffeb418f.svg";
