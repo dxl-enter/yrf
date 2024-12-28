@@ -17,6 +17,7 @@ export default function FooterSecondary({ children }: Props) {
 				zIndex: 9999,
 				color: colorTextBase,
 				background: colorBgElevated,
+				borderTop: '1px solid rgba(255, 255, 255, 0.1)'
 			}}
 		>
 			{children}
