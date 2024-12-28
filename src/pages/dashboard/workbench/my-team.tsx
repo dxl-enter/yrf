@@ -9,6 +9,12 @@ export default function MyTeam() {
 	const goMyTeam = () => {
 		navigatge("/my_team");
 	};
+	const cardOperations = [
+		{ subtitle: '直推地址', title: '714k' },
+		{ subtitle: '有效地址', title: '1.35m' },
+		{ subtitle: '团队收益', title: '1.72m' },
+		{ subtitle: '我的收益', title: '234' },
+	];
 	return (
 		<Card className="flex-col">
 			<header className="self-start flex items-center justify-between">
@@ -23,20 +29,13 @@ export default function MyTeam() {
 					团队明细
 				</Button>
 			</header>
-			<Row gutter={[16, 16]} justify="center" className="mt-4">
-				<Col lg={6} md={6} span={6}>
-					<AnalysisTeam title="714k" subtitle="直推地址" />
-				</Col>
-				<Col lg={6} md={6} span={6}>
-					<AnalysisTeam title="1.35m" subtitle="有效地址" />
-				</Col>
-				<Col lg={6} md={6} span={6}>
-					<AnalysisTeam title="1.72m" subtitle="团队收益" />
-				</Col>
-				<Col lg={6} md={6} span={6}>
-					<AnalysisTeam title="234" subtitle="我的收益" />
+
+			<Row gutter={[16, 16]} justify="center">
+				<Col span={24} md={24}>
+					<AnalysisTeam operations={cardOperations} />
 				</Col>
 			</Row>
+		
 		</Card>
 	);
 }
