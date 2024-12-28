@@ -12,7 +12,7 @@ export default function BindSuperiors() {
 				</header>
 				<div className="mt-4">
 					<Input value={value} placeholder="请输入上级地址" />
-					<Button block type="primary" className="mt-4 shadow__btn">
+					<Button block type="primary" className="mt-4" ghost shape="round">
 						立即绑定
 					</Button>
 				</div>
