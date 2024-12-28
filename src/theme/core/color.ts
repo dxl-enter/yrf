@@ -10,7 +10,7 @@ export const presetsColors: Record<ThemeColorPresets, ColorScale> = {
 	[ThemeColorPresets.Default]: {
 		lighter: "#C8FAD6",
 		light: "#5BE49B",
-		main: "#00A76F",
+		main: "#34A853",
 		dark: "#007867",
 		darker: "#004B50",
 	},
