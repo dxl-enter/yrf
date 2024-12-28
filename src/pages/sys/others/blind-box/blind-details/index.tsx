@@ -9,9 +9,11 @@ import { useTranslation } from "react-i18next";
 import {Button, Tag, Typography, Drawer} from "antd";
 import FooterSecondary from "@/layouts/_common/footer-secondary";
 import { CloseCircleOutlined } from '@ant-design/icons';
+import { useNavigate } from "react-router";
 
 
 function UserProfile() {
+	const navigatge = useNavigate();
 	const { avatar } = useUserInfo();
 	const [currentTabIndex, setcurrentTabIndex] = useState(0);
 	const { t } = useTranslation();
@@ -21,6 +23,9 @@ function UserProfile() {
 		backgroundPosition: "center",
 		backgroundRepeat: "no-repeat",
 	};
+	const onPresaleDetails = () => {
+		navigatge('/my_blind_box');
+	}
 
 	const tabs = [
 		{
@@ -110,7 +115,7 @@ function UserProfile() {
 							width="200px"
 							className="my-[32px]"
 						/>
-						<Button type="primary" ghost>点我查看</Button>
+						<Button type="primary" ghost onClick={onPresaleDetails}>点我查看</Button>
 						<CloseCircleOutlined onClick={onClose} style={{ fontSize: '32px' }} className="mt-6" />
 					</div>
 				</Drawer>) : (
