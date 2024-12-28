@@ -6,10 +6,11 @@ import { useState } from "react";
 import BlindBoxContent from "./components/blind-box-content";
 import GameplayIntroduction from "./components/gameplay-introduction";
 import { useTranslation } from "react-i18next";
-import {Button, Tag} from "antd";
+import {Button, Tag, Typography} from "antd";
 import React from "react";
 import FooterSecondary from "@/layouts/_common/footer-secondary";
 import {useNavigate} from "react-router";
+
 
 function UserProfile() {
 	const navigatge = useNavigate();
@@ -77,6 +78,7 @@ function UserProfile() {
 			</Card>
 			<div>{tabs[currentTabIndex].content}</div>
 			<FooterSecondary>
+				<Typography.Title style={{float: 'left', marginBottom: 0}} level={4}>124USDT</Typography.Title>
 				<Button
 					type="primary"
 					style={{ float: 'right' }}
