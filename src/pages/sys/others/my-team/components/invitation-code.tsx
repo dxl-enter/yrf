@@ -17,7 +17,9 @@ export default function InvitationCode() {
 					<Button
 						block
 						type="primary"
-						className="mt-4 shadow__btn"
+						className="mt-4"
+						ghost
+						shape="round"
 						onClick={() => copyFn(value)}
 					>
 						复制邀请链接
@@ -33,7 +35,9 @@ export default function InvitationCode() {
 					<Button
 						block
 						type="primary"
-						className="mt-4 shadow__btn"
+						className="mt-4"
+						ghost
+						shape="round"
 						onClick={() => copyFn(value)}
 					>
 						保存二维码到相册
