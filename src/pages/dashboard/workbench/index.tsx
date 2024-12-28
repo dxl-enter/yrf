@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, Carousel, Col, Row } from "antd";
 
 import CooperativePartner from "@/pages/dashboard/workbench/cooperative-partner";
@@ -9,7 +10,7 @@ import MyTeam from "@/pages/dashboard/workbench/my-team";
 import MyInvitation from "@/pages/dashboard/workbench/my-invitation";
 
 function Workbench() {
-	const contentStyle = {
+	const contentStyle: React.CSSProperties = {
 		height: "160px",
 		color: "#fff",
 		lineHeight: "160px",
